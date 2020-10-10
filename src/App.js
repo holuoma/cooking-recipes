@@ -4,7 +4,7 @@ import {client} from './client'
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-import Posts from './components/Post'
+import MyPostRecipes from './components/MyPost'
 import './App.css';
 
 const App=()=> {
@@ -40,7 +40,7 @@ const App=()=> {
     <div className='root'>
         <Header />
          <div className='posts'>
-            <Posts recipes={recipes}/>
+            <MyPostRecipes recipes={recipes}/>
           </div>
       </div>
   )

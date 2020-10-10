@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import SinglePostRecipe from './SinglePostRecipe';
 
-const Posts=({recipes})=>{
+const MyPostRecipes=({recipes})=>{
 
    //   const {name, description, howToPrepare, ingredients, featuredImage  } = recipes.fields
     // First time your app loads, recipes is null
@@ -64,7 +64,7 @@ const Posts=({recipes})=>{
 }
 
 
-export default Posts
+export default MyPostRecipes
 
 
 
