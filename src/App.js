@@ -10,6 +10,7 @@ import { Link, Route, Router, Switch } from "react-router-dom";
 import NewRecipe from "./components/Recipe";
 import Nigeria from "./components/Nigeria";
 import Anatolia from "./components/Anatolia";
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import "./App.css";
 
 const App = () => {
@@ -26,7 +27,7 @@ const App = () => {
     <div className="root">
       <div className="recipes">
       
-        <Header />
+        <Header/>
 
         <div className="inputDiv">
           {/*<nav className="navbar navbar-nav navbar-expand-lg navbar-light bg-light" id="bg-light">
@@ -46,16 +47,26 @@ const App = () => {
           </Link>
         </div>
         <Switch>
-         {/*<Route path="/Recipes/:country?">
+         <Route path="/Recipes/:country?">
             <Recipes recipes={recipes} />
+          </Route>
+        {/*  <Route path='/Recipes/Home'>
+          <Recipes recipes={recipes} />
+          </Route>
+         <Route path="/Recipes/Uganda">
+           <Uganda/>
+         </Route>
+          <Route path="/Recipes/Nigeria">
+            <Nigeria />
+          </Route>
+          <Route path="/Recipes/Anatolia">
+            <Anatolia/>
           </Route>*/}
-         <Route path="/Recipes/Uganda" component={Uganda} />
-          <Route path="/Recipes/Nigeria" component={Nigeria} />
-          <Route path="/Recipes/Anatolia" component={Anatolia} />
         </Switch>
       </div>
     </div>
   );
 };
+
 
 export default App;

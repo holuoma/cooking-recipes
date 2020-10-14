@@ -7,6 +7,7 @@ const NewRecipe=({recipe})=>{
     const {name, ingredients, description, howToPrepare, featuredImage}=recipe.fields
     
     return (
+
     <div className='mainDiv'>
    
         <h2>{name}</h2>
