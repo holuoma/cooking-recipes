@@ -34,7 +34,6 @@ div > img {
 }
 
 
-
 .daily {
   color: greenyellow;
   font-size: 100px;
@@ -70,11 +69,13 @@ div > img {
   flex:1;
   border-right: 2px solid green;
   padding: 20px;
+  
 }
 
 .howToPrepare {
   flex:1;
   padding: 20px;
+ 
 }
 
 .allRecipes {

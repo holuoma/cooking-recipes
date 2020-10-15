@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <div className="header">
-      <Link style={{textDecoration:'none'}} className="LinkDaily" to="/Recipes">
+      <Link style={{textDecoration:'none'}} className="LinkDaily" to="/">
         <div className="logo">
           <h1 className="h1">
             <span className="daily">

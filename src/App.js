@@ -10,7 +10,6 @@ import { Link, Route, Router, Switch } from "react-router-dom";
 import NewRecipe from "./components/Recipe";
 import Nigeria from "./components/Nigeria";
 import Anatolia from "./components/Anatolia";
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import "./App.css";
 
 const App = () => {
@@ -33,21 +32,21 @@ const App = () => {
           {/*<nav className="navbar navbar-nav navbar-expand-lg navbar-light bg-light" id="bg-light">
       </nav>*/}
           <input type="search" placeholder="Search" />
-          <Link className="Link" to="/Recipes">
+          <Link className="Link" to="/">
             Home
           </Link>
-          <Link className="Link" to="/Recipes/Uganda">
+          <Link className="Link" to="/Uganda">
             Welcome to: Uganda
           </Link>
-          <Link className="Link" to="/Recipes/Nigeria">
+          <Link className="Link" to="/Nigeria">
             Welcome to: Nigeria
           </Link>
-          <Link className="Link" to="/Recipes/Anatolia">
+          <Link className="Link" to="/Anatolia">
             Welcome to: Anatolia
           </Link>
         </div>
         <Switch>
-         <Route path="/Recipes/:country?">
+         <Route path="/:country?">
             <Recipes recipes={recipes} />
           </Route>
         {/*  <Route path='/Recipes/Home'>
