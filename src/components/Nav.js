@@ -1,9 +1,20 @@
 import React from 'react'
-
- const Nav = ()=>{
-    return (<div></div>)
-}
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './../App.css';
 
 
+ const Navbar = ()=>{
 
-export default Nav;
+
+
+    return (
+            
+        <div></div>
+
+        )
+    }
+
+
+
+export default Navbar;
+

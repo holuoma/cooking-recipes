@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import rolex1 from "../images/rolex1.jpg";
 
 const NewRecipe = ({ recipe }) => {
@@ -17,7 +18,7 @@ const NewRecipe = ({ recipe }) => {
       <h2>{name}</h2>
       <div className="image">
         {/*<img src={rolex1} width='600px' height='400px'/>*/}
-
+        
         {featuredImage && <img src={featuredImage.fields.file.url} />}
       </div>
       <div className="allRecipes">

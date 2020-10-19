@@ -102,5 +102,29 @@ div > img {
   background-color: greenyellow;
   text-decoration: none;
 }
+.daily1 {
+color:lawngreen;
+font-weight: bold;
+font-size: 40px;
+}
+
+.middle {
+margin-right: 150px;
+text-shadow: 2px 2px white;
+}
+
+.footer-bottom {
+margin-top: 80px;
+ margin-left:100px;
+}
 
 
+
+
+.all {
+  background-image: url(./images/background1.jpg);
+  background-color: lightgrey;
+display: flex;
+ justify-content: space-between;
+ width: 100%;
+}
