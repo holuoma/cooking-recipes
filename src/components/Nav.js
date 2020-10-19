@@ -1,7 +1,5 @@
-import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './../App.css';
 
+<<<<<<< HEAD
 
  const Navbar = ()=>{
 
@@ -18,3 +16,5 @@ import './../App.css';
 
 export default Navbar;
 
+=======
+>>>>>>> bf0cd581a978ae78dc4cc122ed037e1c67de48ed
