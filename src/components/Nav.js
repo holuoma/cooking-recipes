@@ -1,16 +1,20 @@
-import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './../App.css';
+import {  Link, Switch, Route, Redirect } from "react-router-dom";
+import React, { useState, useEffect, Fragment } from "react";
+import SearchBar from './SearchBar';
 
 
- const Navbar = ()=>{
+ const Navbar = ({recipes})=>{
 
 
+              
 
     return (
             <>
 
-         <nav className="navbar navbar-expand-lg navbar-light bg-light" id="bg-light">
+           <nav className="navbar navbar-expand-lg navbar-light bg-light" id="bg-light">
                <a className="navbar-brand" href="#">
                  {/* <img src=""> */}
                  </a>
@@ -19,31 +23,31 @@ import './../App.css';
                </button>
               <div className="collapse navbar-collapse" id="navbarText">
                  <ul className="navbar-nav mr-auto" id="navbar-nav-mr-auto">
-                 <li className="nav-item active">
+                    <li className="nav-item active">
                          <a className="nav-link" href="#">
                         <i className="fa fa-home"></i>
                             Home
                          <span className="sr-only">(current)</span>
                          </a>
-                  </li>
+                    </li>
 
                      <li className="nav-item">
-                     <a className="nav-link" href="#">europe</a>
+                         <Link className="nav-link" to="/recipes/country">
+                              europe
+                         </Link>
                      </li>
                      <li className="nav-item">
-                     <a className="nav-link" href="#">asian</a>
-                     </li>
+                          <Link className="nav-link" to="/recipes/country">
+                             asia
+                         </Link>                     </li>
                      <li className="nav-item">
-                     <a className="nav-link" href="#">african</a>
-                     </li>
+                          <Link className="nav-link" to="/recipes/country">
+                             africa
+                         </Link>                     </li>
                  </ul>
-                 {/* form--- */}
-                 <form className="form-inline my-2 my-lg-0">
-                             <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"/>
-                            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+            
 
-            {/* <span className="navbar-text"> */}
+              {/* <span className="navbar-text"> */}
 
               {/* <li className="dropdown">
                 <a className="navbar-brand" id="user-profile" href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -59,13 +63,10 @@ import './../App.css';
                 </ul>
                </li>
                </span> */}
-          </div>
+            </div>
+            <SearchBar recipes={recipes}/>
+
         </nav>
-
-
-
-
-
 
 
             </>)

@@ -3,10 +3,15 @@ import Navbar from './Nav'
 // import './App.css';
 
 
-const Header = ()=>{
+
+
+const Header = ({recipes})=>{
+
+
+
     return (
        <>
-       <Navbar/>
+       <Navbar   recipes ={recipes} />
       </>)
 }
 
