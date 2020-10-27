@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import NewRecipe from "./Recipe";
+// import NewRecipe from "./Recipe";
 
 const Recipes = ({recipes}) => {
   console.log(recipes); //array with objects...[{},{},...]=>recipes[0].fields=UgandaObject
