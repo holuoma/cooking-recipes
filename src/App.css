@@ -1,18 +1,15 @@
-<<<<<<< HEAD
 @import url('https://cdnjs.cloudflare.com/ajax/libs/react/16.14.0/umd/react.production.min.js');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 
-.App {
+/* .App {
   text-align: center;
-=======
 
 .root {display: flex;
 flex-direction: column;
 
 
->>>>>>> origin/main
-}
+} */
 
 
 div > img {
@@ -38,7 +35,7 @@ div > img {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-image: url(./images/background1.jpg);
+  /* background-image: url(./images/background1.jpg); */
  
 }
 
@@ -338,7 +335,7 @@ margin-top: 80px;
 
 
 .all {
-  background-image: url(./images/background1.jpg);
+  /* background-image: url(./images/background1.jpg); */
   background-color: lightgrey;
 display: flex;
  justify-content: space-between;
