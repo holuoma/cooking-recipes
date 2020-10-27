@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {useState, useEffect, Fragment} from 'react';
 import {client} from './client'
@@ -5,83 +6,86 @@ import Header from './components/Header';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import MyPostRecipes from './components/MyRecipes'
+import Recipes from "./components/Recipes";
+
+import NewRecipe from "./components/Recipe";
+import Nigeria from "./components/Nigeria";
+import Anatolia from "./components/Anatolia";
+import Uganda from "./components/Uganda";
+
+
 import './App.css';
-import { NavLink, Switch, Route } from "react-router-dom";
+import { NavLink, Link, Switch, Route } from "react-router-dom";
 import HomePage from './components/HomePage';
  import SearchBar from './components/SearchBar';
  import FoundPosts from './components/SearchBar';
 import MyApp from './components/MyApp';
 
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
- //-- https://cdnjs.cloudflare.com/ajax/libs/react/16.14.0/umd/react.production.min.js
-//  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-// <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-//https://www.npmjs.com/package/react-document-meta
-
-const App=()=> {
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+const App = () => {
 
-  const [recipes, setRecipes] = useState();  //[]
-
+  
+  const [recipes, setRecipes] = useState([]);
+  const [userInput, setUserInput]=useState("");
 
        useEffect(()=>{
+   
+        const connectToMyContent = async () => { 
 
-                  //--old
-            //  client.getEntries().then((response, error) => {
+           client.getEntries().then((response, error) => {
 
-            //   if (!error) 
-            //   //set state
-            //   setRecipes(response.items);
-            //   // setLoading(false)
-            //    console.log(response.items)
-            //    //  console.log(recipes.items[0].fields);
-            //   });
+         if (!error) 
+            setRecipes(response.items);
+            console.log(response.items)
+              //  console.log(recipes.items[0].fields);
+         });
+       }
+        connectToMyContent();
 
-
-            const connectToMyContent = async () => { 
-
-               client.getEntries().then((response, error) => {
-
-              if (!error) 
-                 //set state
-                 setRecipes(response.items);
-                 // setLoading(false)
-                 console.log(response.items)
-               //  console.log(recipes.items[0].fields);
-              });
-             }
-            connectToMyContent();
-    
-         }, [ ]);
+      }, [ ]);
 
 
 
-     return (
-      <>
-         <Header  recipes={recipes}/>
+      //  const handleChange=(event)=>{
+      //     setUserInput(event.target.value)
+      //     console.log(event.target.value)
+      //   }
 
-          <Switch>
-            {/* home route */}
-              <Route path="/"
-                 render={(props) => <HomePage recipes={recipes} {...props} />}
+    return (
+       <>
+          <div className="recipes">
+      
+            <Header  recipes={recipes}/>
 
-              /> 
+            <div className="inputDiv">
+               <Link className="Link" to="/"> Home</Link>            
+               <Link className="Link" to="/Uganda">Welcome to: Uganda</Link>  
+               <Link className="Link" to="/Nigeria">Welcome to: Nigeria</Link>
+               <Link className="Link" to="/Anatolia"> Welcome to: Anatolia</Link>
+            </div>
+             <Switch>
+                {/* <Route path="/:country?">
+                     <Recipes recipes={recipes}/>
+                   </Route> */}
 
-               <Route path="/recipes"
+                <Route path="/:country?"
+                     render={(props) => <HomePage recipes={recipes} {...props} />}
+                /> 
+
+                <Route path="/recipes"
                    render={(props) => <MyPostRecipes recipes={recipes} {...props} />}
-              />
-
-             {/* <Route  path="/search/"
-                render={( ) => (
-                <SearchBar/>
-                )}
-             /> */}
- 
-            </Switch> 
-
-      </> 
-    )
-}
+                />
+             </Switch>
+          </div>
+          <div><Footer/></div>
+       </> 
+    );
+ }
   
-  export default App;
+export default App;

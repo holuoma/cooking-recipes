@@ -1,48 +1,109 @@
+<<<<<<< HEAD
 @import url('https://cdnjs.cloudflare.com/ajax/libs/react/16.14.0/umd/react.production.min.js');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 
 .App {
   text-align: center;
+=======
+
+.root {display: flex;
+flex-direction: column;
+
+
+>>>>>>> origin/main
 }
 
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+div > img {
+
+  margin-bottom:20px;
+  margin-top: 20px;
+
+} 
+
+.mainDiv {
+  border:10px solid greenyellow;
+  display: flex;
+    flex-direction: column;
+    display: block;
+    text-align: center;
+  padding:10px;
+  
+  
+}
+
+.header {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  background-image: url(./images/background1.jpg);
+ 
+}
+
+
+.daily {
+  color: greenyellow;
+  font-size: 100px;
+  text-shadow: 2px 2px white;
+  
+}
+
+.cious {
+  color: black;
+  text-shadow: 2px 2px white;
+}
+
+.logo:hover {
+  background-color: lightgrey;
+  display: inline-block;
+}
+
+.inputDiv {
+  
+  display: flex;
+  justify-content: space-around;
+  background-color: lightgrey;
+}
+
+.description {
+  flex:1;
+  border-right: 2px solid green;
+  padding: 20px;
+
+}
+
+.ingredients {
+  flex:1;
+  border-right: 2px solid green;
+  padding: 20px;
+  
+}
+
+.howToPrepare {
+  flex:1;
+  padding: 20px;
+ 
+}
+
+.allRecipes {
+  display: flex;
+
+}
+
+.Link{
+  text-decoration: none;
+  padding: 10px;
   color: white;
+  font-weight: bold;
 }
 
-/* ______________________________________________________________________________
-    Nav---------------Navbar css---------------------------------------------------
-______________________________________________________________________________ */
-
-#bg-light {
-  background-color: #538370bd!important;
-}
-.login {
-  color: red;
-}
-#navbar-nav-mr-auto {
-  color: white;
-}
-.navbar-light .navbar-nav .nav-link {
-  color: #fff;
-  font-size: 20px;
-  text-transform: capitalize;
+.LinkDaily:hover
+{
+  text-decoration: none;
 }
 
-#img-thumbnail-img-circle {
-  padding: .25rem;
-  border-radius: 50rem;
-  max-width: 100%;
-  height: 80px;
-} 
 
 /* ______________________________________________________________________________
     search-Bar------------------Input--Form--------------------------------------------
@@ -253,6 +314,33 @@ section .section-title {
 
 
 
+.Link:hover {
+  background-color: greenyellow;
+  text-decoration: none;
+}
+.daily1 {
+color:lawngreen;
+font-weight: bold;
+font-size: 40px;
+}
+
+.middle {
+margin-right: 150px;
+text-shadow: 2px 2px white;
+}
+
+.footer-bottom {
+margin-top: 80px;
+ margin-left:100px;
+}
 
 
 
+
+.all {
+  background-image: url(./images/background1.jpg);
+  background-color: lightgrey;
+display: flex;
+ justify-content: space-between;
+ width: 100%;
+}

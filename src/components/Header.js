@@ -1,8 +1,9 @@
-import React from 'react'
-import Navbar from './Nav'
-// import './App.css';
+import React from "react";
+import { useState } from "react";
+import Uganda from "./Uganda";
+import { Link, Route, Switch } from "react-router-dom";
 
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 const Header = ({recipes})=>{
@@ -11,9 +12,13 @@ const Header = ({recipes})=>{
 
     return (
        <>
-       <Navbar   recipes ={recipes} />
+          <Navbar   recipes ={recipes} />
+
+
+
       </>)
 }
 
 
-export default Header
+export default Header;
+

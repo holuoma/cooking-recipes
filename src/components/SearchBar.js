@@ -43,32 +43,13 @@ import SingleRecipePage from './SingleRecipePage';
         useEffect(() => {
           setLoading(true);     
           setFilterSearch(recipes);
-          // console.log(recipes);
-          //-----------set loading off when component mounts
+
               setLoading(false);
 
           }, [ ]);
 
 
-          //----test---- map()------
 
-          // {filterSearch && filterSearch.map(
-          //   (recipe) => {
-
-          //         return  console.log((<p>{recipe.fields.name}</p>));
-          //   })
-          // }
-           
-          
-           //-----test ---filter()
-           
-           // const newSort = recipes && recipes.filter(
-                //     (recipe) => {
-                //         if(recipe.fields.name) { 
-                //           return  (console.log( recipe.fields.name));
-                //          }
-                //     })
-                //     console.log( newSort);
 
 
         useEffect(() => {
@@ -116,7 +97,6 @@ import SingleRecipePage from './SingleRecipePage';
                                    howToPrepare={recipe.fields.howToPrepare}
                                    ingredients={recipe.fields.ingredients}
                                     />
-                       {/* <Link to={`/search`}><FoundPosts name={recipe.fields.name}/> </Link> */}
                   </Fragment>
 
                 )

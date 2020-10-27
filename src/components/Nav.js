@@ -7,22 +7,20 @@ import SearchBar from './SearchBar';
 
 
  const Navbar = ({recipes})=>{
-
-
-              
+           
 
     return (
-            <>
+            
 
            <nav className="navbar navbar-expand-lg navbar-light bg-light" id="bg-light">
                <a className="navbar-brand" href="#">
-                 {/* <img src=""> */}
                  </a>
                 <button className="navbar-toggler" type="button" dataToggle="collapse" dataTarget="#navbarText" ariaControls="navbarText" ariaExpanded="false" ariaLabel="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                </button>
               <div className="collapse navbar-collapse" id="navbarText">
                  <ul className="navbar-nav mr-auto" id="navbar-nav-mr-auto">
+
                     <li className="nav-item active">
                          <a className="nav-link" href="#">
                         <i className="fa fa-home"></i>
@@ -47,31 +45,37 @@ import SearchBar from './SearchBar';
                  </ul>
             
 
-              {/* <span className="navbar-text"> */}
 
-              {/* <li className="dropdown">
-                <a className="navbar-brand" id="user-profile" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <img src="http://lorempixel.com/100/100/people/9/" class="img-responsive img-thumbnail img-circle" id="img-thumbnail-img-circle">   
-                </a>
-                <h3 className="login">
-                    login          
-                </h3>
-                <ul className="dropdown-menu dropdown-block" role="menu">
-                    <li><a href="#">Profile edition</a></li>
-                    <li><a href="#">Admin</a></li>
-                    <li><a href="#">Logout</a></li>
-                </ul>
-               </li>
-               </span> */}
+      {/* <Link  className="LinkDaily" to="/">
+          <h1 className="h1">
+            <span className="daily">
+              <em>Daily</em>
+            </span>
+            <span className="cious">
+              <em>cious</em>
+            </span>
+          </h1>
+      </Link> */}
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
-            <SearchBar recipes={recipes}/>
+                  <SearchBar recipes={recipes}/>
 
-        </nav>
-
-
-            </>)
+           </nav>
+        )
     }
 
 
 
 export default Navbar;
+

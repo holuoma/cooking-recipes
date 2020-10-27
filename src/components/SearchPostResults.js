@@ -43,7 +43,6 @@ import Substring from 'react-substring';
 
             )}
             />
-
       </Switch> 
 
         </div>

@@ -10,22 +10,6 @@ import Substring from 'react-substring';
 const RecentPosts = ({recipes}) => {
 
     const [newestPost, setNewestPost] = useState( )
-
-
-
-    // const recent = recipes && recipes.sort(
-    //     (a,b) => new Date(b.fields.featuredImage.sys.createdAt) - new Date(a.fields.featuredImage.sys.createdAt) 
-    //    ).slice(0, 2)
-
-
-
-    //   useEffect(() => {
-
-    //      setNewestPost(recent);
-
-
-    //     }, [newestPost]);
-
     
 
     return ( 
@@ -33,15 +17,15 @@ const RecentPosts = ({recipes}) => {
          
         <>
          
-      <div className="p2">
+         <div className="p2">
                         <h1>recent posts</h1>
-         <div className="card-group" id="recent-post">              
-        { 
+             <div className="card-group" id="recent-post">              
+           { 
            
-           recipes && recipes.sort(
-            (a,b) => new Date(b.fields.featuredImage.sys.createdAt) - new Date(a.fields.featuredImage.sys.createdAt) 
-           ).slice(0, 2) 
-           .map( (recent) => 
+              recipes && recipes.sort(
+                (a,b) => new Date(b.fields.featuredImage.sys.createdAt) - new Date(a.fields.featuredImage.sys.createdAt) 
+                ).slice(0, 2) 
+              .map( (recent) => 
            
              <div className="card">
                 <img className="card-img-top" src={recent.fields.featuredImage.fields.file.url} alt="Card image cap"/>

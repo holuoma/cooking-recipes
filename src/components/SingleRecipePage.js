@@ -25,10 +25,7 @@ const SingleRecipePage = ({name, featuredImage, description, howToPrepare,ingred
                                    {ingredients}
                                    <a href="/recipes/recipe.id">...read more</a>
                                  </div>
-                                 {/* <div className="card-footer">
-                                 <h6>created: </h6>{recipe.sys.createdAt}
-                                 <h6>Updated: </h6>{recipe.sys.updatedAt} */}
-
+                            
                                      <small className="text-muted"><h6>Reviews</h6></small>
                                  </div>
       </>
