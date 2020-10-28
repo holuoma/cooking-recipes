@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import rolex1 from "../images/rolex1.jpg";
+import dHintergrund from '../images/dHintergrund.png'
 
 const NewRecipe = ({ recipe }) => {
   console.log(recipe); // whole Object ...fields:{description,...}
@@ -9,17 +9,14 @@ const NewRecipe = ({ recipe }) => {
     name,
     ingredients,
     description,
-    howToPrepare,
-    featuredImage,
-  } = recipe.fields;
+    howtoprepare,
+  } = recipe;
 
   return (
     <div className="mainDiv">
       <h2>{name}</h2>
       <div className="image">
-        {/*<img src={rolex1} width='600px' height='400px'/>*/}
-        
-        {featuredImage && <img src={featuredImage.fields.file.url} />}
+      <img src={dHintergrund}/>
       </div>
       <div className="allRecipes">
         <div className="description">
@@ -37,7 +34,7 @@ const NewRecipe = ({ recipe }) => {
         <div className="howToPrepare">
           <b>How to prepare:</b> <br />
           <br />
-          {howToPrepare}
+          {howtoprepare}
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter} from 'react-router-dom'
@@ -20,6 +20,4 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );*/}
-=======
->>>>>>> bf0cd581a978ae78dc4cc122ed037e1c67de48ed
 

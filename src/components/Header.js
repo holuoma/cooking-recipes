@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 import React from "react";
 import { useState } from "react";
 import Uganda from "./Uganda";
 import { Link, Route, Switch } from "react-router-dom";
+import Searchbar from '../Searchbar'
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -27,6 +27,3 @@ const Header = () => {
   );
 };
 export default Header;
-=======
-
->>>>>>> bf0cd581a978ae78dc4cc122ed037e1c67de48ed
